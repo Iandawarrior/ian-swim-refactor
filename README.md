@@ -14,4 +14,4 @@ Added some reasoning and renamed a route file after better understanding.(5th Co
 
 Isolated getUserById functionality into a function to be able to be reused in another class. Renamed getUserById and getPetsFavFood routes.(6th Commit)
 
-Segregated unsetting password for all users and joining their names into a single string.(7th Commit)
+Segregated getAllUsers into unsetting password for all users and joining their names into a single string.(7th Commit)
