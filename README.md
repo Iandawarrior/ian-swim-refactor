@@ -13,3 +13,5 @@ Segregated Routes into individual files for greater readability.(4th Commit)
 Added some reasoning and renamed a route file after better understanding.(5th Commit)
 
 Isolated getUserById functionality into a function to be able to be reused in another class. Renamed getUserById and getPetsFavFood routes.(6th Commit)
+
+Segregated unsetting password for all users and joining their names into a single string.(7th Commit)
