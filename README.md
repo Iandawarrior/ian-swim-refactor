@@ -11,3 +11,5 @@ Ignore previous gibberish, after compressing a 20 hour php refresher course into
 Segregated Routes into individual files for greater readability.(4th Commit)
 
 Added some reasoning and renamed a route file after better understanding.(5th Commit)
+
+Isolated getUserById functionality into a function to be able to be reused in another class. Renamed getUserById and getPetsFavFood routes.(6th Commit)
