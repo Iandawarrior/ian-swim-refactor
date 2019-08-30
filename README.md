@@ -7,3 +7,5 @@ Segregated User database into its own file, and created api file under the route
 User table has post function, hence able to see all neccesary attributes, however pets table does not, so all attributes must be acquired through request. (Second Commit)
 
 Ignore previous gibberish, after compressing a 20 hour php refresher course into 7 hours, and another 5 hours spent studying the laravel framework, everything seems a bit less complex to me. Added composer installation to index.php, also will add an option to optimise routing during deployment using the artisan framework. While this is only supposed to be used when there is a large number of route requests, this program might progress to that stage one day, for now the code shall be commented out.(Third Commit)
+
+Segregated Routes into individual files for greater readability.(4th Commit)
