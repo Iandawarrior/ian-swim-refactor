@@ -1,16 +1,21 @@
 <?php 
-include "getUserById.php";
+/*This function is to get the favourite food of all pets by their respective IDs
+Changes:
+-Replaced getUser with getUserById from database file 
+-Moved get pets by user ID DB request to database.php
+*/
+
+include "database/database.php";
 
 Route::get('/v1/users/{id}/pets', function($id) {
-    $user = getUser($id);
+    $user = getUserById($id);
     $pets = [];
-    
 
     if ($user != null) {
-        $pets = DB::table('pets')->where('user_id', $user->id)->get();
+        $pets = getPetsByUserId($user->id);
         if (count($pets) > 0) {
             foreach ($pets as $pet) {
-                $pet->favourite_foods = DB::table('pet_foods')->where('pet_id', $pet->id)->get();
+                $pet->favourite_foods = getPetFavFoodById($pet->id);
             }
         }
     }

@@ -1,4 +1,10 @@
 <?php
+/*This function posts a user's request after validation
+Changes:
+-Moved insert db request to database.php and replaced with insertUserRequest function
+-Moved get users by email DB request to database.php and replaced with getUserByEmail function
+*/
+include "database/database.php";
 
 Route::post('/v1/users', function(Request $request) {
     if ($request->has('password')) {
@@ -20,17 +26,10 @@ Route::post('/v1/users', function(Request $request) {
         'email' => 'required|unique:users|max:256',
     ]);
 
-    DB::table('users')->insert([
-        'first_name' => $request->first_name,
-        'middle_name' => $request->middle_name,
-        'last_name' => $request->last_name,
-        'email' => $request->email,
-        'contact_number' => $request->contact_number,
-        'disabled' => false,
-    ]);
- 
-    $users = DB::table('users')->where('email', $email)->get();
- 
+    insertUserRequest($request);
+    
+    $users = getUsersByEmail($request->email);
+    
     if (count($users) > 0) {
         $user = $users[0];
         $user->login_date_formatted = $user->login_date->format('Y-m-d H:i:s'); 

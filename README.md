@@ -15,3 +15,8 @@ Added some reasoning and renamed a route file after better understanding.(5th Co
 Isolated getUserById functionality into a function to be able to be reused in another class. Renamed getUserById and getPetsFavFood routes.(6th Commit)
 
 Segregated getAllUsers into unsetting password for all users and joining their names into a single string.(7th Commit)
+
+Optimised deletePet by printing validation pet exists before deleting as well as removing unused argument.(8th Commit) 
+
+Moved all Database code to the database.php file and encapsulated them in functions for better readability as well as added header comments to all files(9th Commit)
+
