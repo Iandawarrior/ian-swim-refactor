@@ -5,6 +5,11 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 
 class UsersController extends Controller{
+
+    /*
+    This function joins the user's first, middle and last name's with neat spacing
+    Returns: List of users with display name stored
+    */
     public function joinAllUsersDisplayName() {
         $users = DB::table('users')->get();
         foreach ($users as $user) {
@@ -14,6 +19,10 @@ class UsersController extends Controller{
         return $users;
     }
 
+    /*
+    This function focuses on getting a user by ID
+    Returns: A user
+    */
     public function getUserById($id) {
         $user = null;
         $users = DB::table('users')->where('id', $id)->get();
@@ -23,6 +32,10 @@ class UsersController extends Controller{
         return $user;
     }
 
+    /*
+    This function is to get the favourite food of all pets by their respective IDs
+    Returns: A list of pets with favourite food stored
+    */
     public function getPetsFavFood($id) {
         $user = null;
         $pets = [];
@@ -43,6 +56,10 @@ class UsersController extends Controller{
         return $pets;
     }
 
+    /*
+    This function posts a user's request after validation
+    Returns: Null
+    */
     public function postUserRequest(Request $request) {
         if ($request->has('password')) {
             unset($request['password']);
@@ -85,6 +102,11 @@ class UsersController extends Controller{
         return null;
     }
 
+    /*
+    This function deletes a pet
+    Returns: Null
+    This delete function takes in user id but doesn't use it within the function
+    */
     public function deletePetById($userId, $petId) {
         DB::table('pets')->where('id', $petId)->delete();
         return null;

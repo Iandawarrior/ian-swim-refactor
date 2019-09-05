@@ -24,3 +24,5 @@ Added returns to all comments in files and deleted copy of original file from pu
 
 Now I have compartmentalised the code, I will now begin refactoring it Laravelly by adding the MVC architecture.
 More specifically, I have added the UsersController.php file to handle all the incoming requests.(11th Commit)
+
+Now as all developers do, I have realised the first 80 percent of my refactoring is absolute rubbish so I am going to clear it all up. Also added some reasoning to the Controlles(12th Commit)
