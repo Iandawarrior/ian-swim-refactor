@@ -1,5 +1,6 @@
 <?php 
 /*This function is to get the favourite food of all pets by their respective IDs
+Returns: A list of pets with favourite food stored
 Changes:
 -Replaced getUser with getUserById from database file 
 -Moved get pets by user ID DB request to database.php

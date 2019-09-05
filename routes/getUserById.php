@@ -1,5 +1,6 @@
 <?php
 /*This function focuses on getting a user by ID
+Returns: User
 Changes:
 -Moved DB get request to database.php file
 */

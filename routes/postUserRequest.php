@@ -1,5 +1,6 @@
 <?php
 /*This function posts a user's request after validation
+Returns: Null
 Changes:
 -Moved insert db request to database.php and replaced with insertUserRequest function
 -Moved get users by email DB request to database.php and replaced with getUserByEmail function

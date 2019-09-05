@@ -1,5 +1,6 @@
 <?php
 /*This function joins the user's first, middle and last name's with neat spacing
+Returns: List of users with display name stored
 Changes:
 -Moved get all users DB request to database.php file and replaced with getAllUsers() function
 */

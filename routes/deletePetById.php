@@ -1,5 +1,6 @@
 <?php
 /*This function deletes a pet
+Returns: Null
 Changes:
 -$userId was passed in but never used hence removed
 -Added confirmation that pet exists before deleting */

@@ -20,3 +20,4 @@ Optimised deletePet by printing validation pet exists before deleting as well as
 
 Moved all Database code to the database.php file and encapsulated them in functions for better readability as well as added header comments to all files(9th Commit)
 
+Added returns to all comments in files and deleted copy of original file from public folder(10th Commit)
