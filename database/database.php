@@ -32,7 +32,7 @@ function insertUserRequest($request){
             'email' => $request->email,
             'contact_number' => $request->contact_number,
             'disabled' => false,
-        ])
+        ]);
     return null;
 }
 

@@ -9,7 +9,7 @@ include "database/database.php";
 
 Route::delete('/v1/users/{id}/pets/{id}', function($petId) {
     //Check if pet exists
-    $pet = getPetById($petID)
+    $pet = getPetById($petID);
     if ($pet != null) {
         deletePetById($petID);
         echo "Successful delete.";

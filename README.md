@@ -21,3 +21,6 @@ Optimised deletePet by printing validation pet exists before deleting as well as
 Moved all Database code to the database.php file and encapsulated them in functions for better readability as well as added header comments to all files(9th Commit)
 
 Added returns to all comments in files and deleted copy of original file from public folder(10th Commit)
+
+Now I have compartmentalised the code, I will now begin refactoring it Laravelly by adding the MVC architecture.
+More specifically, I have added the UsersController.php file to handle all the incoming requests.(11th Commit)
