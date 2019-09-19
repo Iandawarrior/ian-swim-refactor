@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Pet;
+use App\Models\PetFood;
 
-class PetsController extends Controller{
+class PetFoodsController extends Controller{
 
     public function index() {
 
