@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class UsersController extends Controller{
 
@@ -88,6 +89,7 @@ class UsersController extends Controller{
             'contact_number' => $request->contact_number,
             'disabled' => false,
         ]);
+        // Change this  based on Libraries Controller in OGS
      
         $users = DB::table('users')->where('email', $email)->get();
      

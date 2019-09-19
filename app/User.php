@@ -15,6 +15,19 @@ use Illuminate\Support\Facades\DB;
 
 class User extends Eloquent {
 
+    /*
+    This function joins the user's first, middle and last name's with neat spacing
+    Returns: List of users with display name stored
+    */
+    public function joinAllUsersDisplayName() {
+        $users = DB::table('users')->get();
+        foreach ($users as $user) {
+            $user->display_name = $user->first_name . ' ' . $user->middle_name . ' ' . $user->last_name;
+            unset($user->password);
+        }
+        return $users;
+    }
+
     public function insertUserRequest($request){
         DB::table('users')->insert([
                 'first_name' => $request->first_name,

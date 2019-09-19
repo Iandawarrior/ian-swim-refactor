@@ -26,3 +26,9 @@ Now I have compartmentalised the code, I will now begin refactoring it Laravelly
 More specifically, I have added the UsersController.php file to handle all the incoming requests.(11th Commit)
 
 Now as all developers do, I have realised the first 80 percent of my refactoring is absolute rubbish so I am going to clear it all up. Also added some reasoning to the Controlles(12th Commit)
+
+-------------------------------------------------------------------------------------------------------------
+2nd Attempt
+
+Had the right idea initially, but with poor execution, have moved all the database functions into respective model classes as well as called the Eloquent ORM module to help run the DB queries. The documentation advocates for avoiding the model folder because they feel models are too ambiguous. That being said, some example projects on github decided to include it anyways so it comes down to terms of readability.(13th Commit)
+
