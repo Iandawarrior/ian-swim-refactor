@@ -37,3 +37,5 @@ Fixed the UsersController classes and added models, granted they are quite barre
 Updated Model classes for neccesary relationships between models and bugfixed UsersController(15th Commit)
 
 Finished refactoring PetFoodsController and added some keys to the tables under migrations(16th Commit)
+
+Finished refactoring PetsController and moved all the extra files to redundant folder. Refactoring complete.(17th Commit)

@@ -8,11 +8,12 @@ class Pet extends Model {
 
     public $timestamps = false;
 
-    //Added connection to Pet model
+    //Added connection to the Pet model
     public function petfood() {
         return $this->hasMany('App\PetFood');  
     }
 
+    //Added connection to the User model
     public function user() {
         return $this->hasOne('App\User');  
     }
