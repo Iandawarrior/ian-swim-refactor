@@ -8,7 +8,7 @@ use App\Models\Pet;
 class PetsController extends Controller{
 
     public function index() {
-
+        //Default if page is called. Displays nothing
     }
 
     public function getById($petid) {

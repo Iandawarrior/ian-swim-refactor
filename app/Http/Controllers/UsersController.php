@@ -7,6 +7,10 @@ use App\Models\User;
 
 class UsersController extends Controller{
 
+    public function index() {
+        //Default if page is called. Displays nothing
+    }
+
     /*
     This function joins the user's first, middle and last name's with neat spacing
 
@@ -53,7 +57,7 @@ class UsersController extends Controller{
     Returns: The first user
     */
     public function getFirstUser() {
-        $users = User::find(1);
+        $user = User::find(1);
         return $user;
     }
 
@@ -66,8 +70,8 @@ class UsersController extends Controller{
     */
 
     public function getUsersByEmail($email) {
-        $users = User::find($email);
-        return $user;
+        $users = User::where('email', $email)->get();
+        return $users;
     }
 
      /*
@@ -94,10 +98,12 @@ class UsersController extends Controller{
     }
 
     /*
-    This function posts a user's request after validation
+    This function creates a new user and validates the input fields. The email db access as well as the datetime 
+    formatting have been moved to their respective classes.
+
     Returns: Null
     */
-    public function submit(Request $request) {
+    public function createUser(Request $request) {
         if ($request->has('password')) {
             unset($request['password']);
         }

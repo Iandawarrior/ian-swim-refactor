@@ -8,31 +8,25 @@ use App\Models\PetFood;
 class PetFoodsController extends Controller{
 
     public function index() {
-
+        //Default if page is called. Displays nothing
     }
 
-    public function getById($petid) {
-        $pet = DB::table('pets')->where('id', $petid)->get();
-        return $pet;
-    }
+    /*
+    This function is to get the pets favourite food by pet id
 
-    public function deleteById($petid){
-        DB::table('pets')->where('id', $petId)->delete();
-        return null;
-    }
+    Refactoring: $fav_food = DB::table('pet_foods')->where('pet_id', $petId)->get();
 
-    public function getPetsbyUserId($userId){
-        $pets = DB::table('pets')->where('user_id', $userId)->get();
-        return $pets;
-    }
-
+    Returns: An array of fav foods of a pet
+    */
     public function getPetFavFoodById($petId){
-        $fav_food = DB::table('pet_foods')->where('pet_id', $petId)->get();
+        $pet = Pet::find($petId);
+        $fav_food = $pet->favorite_foods;
         return $fav_food;
     }
 
     /*
     This function is to get the favourite food of all pets by their respective IDs
+
     Returns: A list of pets with favourite food stored
     */
     public function getPetsFavFood($id) {
@@ -55,16 +49,5 @@ class PetFoodsController extends Controller{
         }
      
         return $pets;
-    }
-    
-    /*
-    This function deletes a pet
-    Returns: Null
-    This function takes in user id but doesn't use it within the function: Consider removing
-    */
-    public function deletePetById($userId, $petId) {
-        //DB::table('pets')->where('id', $petId)->delete();
-        Pet::deleteById($petId);
-        return null;
     }
 }

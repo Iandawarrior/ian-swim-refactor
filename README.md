@@ -33,3 +33,5 @@ Now as all developers do, I have realised the first 80 percent of my refactoring
 Had the right idea initially, but with poor execution, have generated the migrations necessary to build or delete the tables. The documentation advocates for avoiding the model folder because they feel models are too ambiguous. That being said, the models have been placed in the app folder to help better define the classes.(13th Commit)
 
 Fixed the UsersController classes and added models, granted they are quite barren, due to the fact that the migration folder contains the blueprint to build the tables already(14th Commit)
+
+Updated Model classes for neccesary relationships between models and bugfixed UsersController(15th Commit)
