@@ -15,7 +15,8 @@ class CreatePetsTable extends Migration
     {
         Schema::create('pets', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('favorite_foods');
+            $table->string('user_id');       //holds fk for the user(pet owner)
+            $table->array('favorite_foods'); //holds pet foods
             $table->timestamps();
         });
     }

@@ -35,3 +35,5 @@ Had the right idea initially, but with poor execution, have generated the migrat
 Fixed the UsersController classes and added models, granted they are quite barren, due to the fact that the migration folder contains the blueprint to build the tables already(14th Commit)
 
 Updated Model classes for neccesary relationships between models and bugfixed UsersController(15th Commit)
+
+Finished refactoring PetFoodsController and added some keys to the tables under migrations(16th Commit)

@@ -16,6 +16,7 @@ class CreatePetFoodsTable extends Migration
         Schema::create('pet_foods', function (Blueprint $table) {
             $table->increments('id');
             $table->string('food_name');
+            $table->string('pet_id');   //FK to show pet with this favourite food
             $table->timestamps();
         });
     }
